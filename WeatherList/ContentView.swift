@@ -11,11 +11,18 @@ struct ContentView: View {
     var body: some View {
         VStack {
             
-            Text("voici mon nouveau commit eh oui la classe jean guy ")
+            Text("la")
+            Text("la")
+            Text("la")
+            Text("la")
+            Text("la")
+            Text("la")
+            Text("la")
+            Text("la")
+            Text("la c'est la troiieme demarche ")
           
 
         }
-        .padding()
     }
 }
 
