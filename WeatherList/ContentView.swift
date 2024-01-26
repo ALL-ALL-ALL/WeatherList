@@ -11,16 +11,8 @@ struct ContentView: View {
     var body: some View {
         VStack {
             
-            Text("la")
-            Text("la")
-            Text("la")
-            Text("la")
-            Text("la")
-            Text("la")
-            Text("la")
-            Text("la")
-            Text("la c'est la troiieme demarche ")
-          
+            Text("c'est le vrai debut")
+       
 
         }
     }
