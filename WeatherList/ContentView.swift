@@ -10,14 +10,25 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            
-            Text("c'est le vrai debutdsv;jbvbsdn,bvnvsdbnv")
-
+            List(){
+                
+            }
+            List{
+            Text("tu pounche")
+            Text("jte baise ")
+            Text("tu baise ")
+            }
        
 
-        }
-    }
-}
+        } // FIN VSTACK
+        
+        
+        
+        
+        
+        
+    } // FIN BODY
+} // FIN STRUCT
 
 #Preview {
     ContentView()
