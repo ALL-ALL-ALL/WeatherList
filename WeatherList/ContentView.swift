@@ -14,9 +14,9 @@ struct ContentView: View {
                 
             }
             List{
-            Text("tu pounche")
-            Text("jte baise ")
-            Text("tu baise ")
+            Text("oui ")
+            Text("ou non ")
+            Text(" baba ")
             }
        
 
