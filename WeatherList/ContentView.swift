@@ -33,55 +33,25 @@ struct ContentView: View {
         ] // FIN TABLEAU
     
     
-    
     var body: some View {
         NavigationView{
+            
             List(meteoArray) { Meteo in
                 
                   HStack {
-                                  Image(systemName: Meteo.symbolName)
-                                      .foregroundColor(.red)
-                                      .imageScale(.large)
-                                      .padding()
-                                  Text("\(Meteo.temps) \(Meteo.ville)")
-                      
-                      
-                      
-                      
-                      
-                              }  // FIN HSTACK
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
-                  
+                      NavigationLink( destination: MeteoDetailView(meteo: Meteo)) {
+                          Image(systemName: Meteo.symbolName)
+                                                               .foregroundColor(.red)
+                                                               .imageScale(.large)
+                                                               .padding()
+                                                           Text("\(Meteo.temps) \(Meteo.ville)")
+                                                       } // fin navigation link
+                      }// FIN HSTACK
                           } // FIN LIST
             .navigationBarTitle("Weather") // Titre de la barre de navigation
-
-
-                  
-             
-
               } // FIN NAVIGATION VIEW
         } // FIN BODY
-  
-    
-        
-        
-        
-        
-        
-        
     } // FIN STRUC
-    
-    
-    
-    
-
 #Preview {
     ContentView()
 }

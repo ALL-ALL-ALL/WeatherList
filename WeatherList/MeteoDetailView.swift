@@ -8,11 +8,23 @@
 import SwiftUI
 
 struct MeteoDetailView: View {
+    let meteo: Meteo
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
+        VStack {
+            Image(systemName: meteo.symbolName)
+                .foregroundColor(.red)
+                .imageScale(.large)
+                .padding()
+            Text("\(meteo.temps) \(meteo.ville)")
+        } // FIN VSTACK
+        .navigationBarTitle("Detail")
+    }// FIN BODY
+}// STRUCT
+
+  
+        
 
 #Preview {
-    MeteoDetailView()
+    MeteoDetailView(meteo: Meteo(id: UUID(), symbolName: "sun.horizon", temps: "Sun", ville: "Paris"))
 }
