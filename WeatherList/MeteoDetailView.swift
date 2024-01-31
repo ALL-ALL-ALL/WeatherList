@@ -13,12 +13,13 @@ struct MeteoDetailView: View {
     var body: some View {
         VStack {
             Image(systemName: meteo.symbolName)
-                .foregroundColor(.red)
+                .foregroundColor(.blue)
                 .imageScale(.large)
                 .padding()
             Text("\(meteo.temps) \(meteo.ville)")
+            Text("temperature") // ecrire ici pour que toutes les vue(pays) et la même 
         } // FIN VSTACK
-        .navigationBarTitle("Detail")
+        .navigationBarTitle("\(meteo.temps)")
     }// FIN BODY
 }// STRUCT
 

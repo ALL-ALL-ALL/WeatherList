@@ -6,20 +6,17 @@
 //
 
 import SwiftUI
-
 struct Meteo : Identifiable {
     
     var id = UUID()
     var symbolName: String
     var temps: String
     var ville: String
-    
-} // FIN STRUCT
-
-
+    } // FIN STRUCT
 
 struct ContentView: View {
     
+
     let meteoArray: [Meteo] = [
         
         Meteo(id: UUID(), symbolName: "sun.horizon", temps: "Sun", ville: "Paris"),
@@ -28,16 +25,12 @@ struct ContentView: View {
         Meteo(id: UUID(), symbolName: "moon.fill", temps: "Moon", ville: "Jakarta"),
         Meteo(id: UUID(), symbolName: "snowflake", temps: "Snow", ville: "Medellin"),
         Meteo(id: UUID(), symbolName: "tornado", temps: "Tornado", ville: "Porto")
-
-            
+        
         ] // FIN TABLEAU
-    
-    
+ 
     var body: some View {
         NavigationView{
-            
             List(meteoArray) { Meteo in
-                
                   HStack {
                       NavigationLink( destination: MeteoDetailView(meteo: Meteo)) {
                           Image(systemName: Meteo.symbolName)
@@ -47,6 +40,7 @@ struct ContentView: View {
                                                            Text("\(Meteo.temps) \(Meteo.ville)")
                                                        } // fin navigation link
                       }// FIN HSTACK
+                
                           } // FIN LIST
             .navigationBarTitle("Weather") // Titre de la barre de navigation
               } // FIN NAVIGATION VIEW
